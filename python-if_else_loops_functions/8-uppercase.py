@@ -10,6 +10,6 @@ def uppercase(str):
             upper_str += chr(upper_value)
         else:
             upper_str += s
-    print(upper_str)
+    print("{}".format(upper_str))
 
 
