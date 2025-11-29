@@ -3,9 +3,11 @@ import sys
 if __name__ == "__main__":
     arg_list = sys.argv
     len_list = len(arg_list)
-    name = "argument"
-    if len_list > 2:
-        name += "s"
-    print("{} {}:".format(len_list - 1, name))
+    name = "argument:"
+    if len_list - 1 == 0:
+        name = "arguments."
+    elif len_list > 2 and len_list != 1:
+        name = "arguments:"
+    print("{} {}".format(len_list - 1, name))
     for i in range(1, len_list):
         print("{}: {}".format(i, arg_list[i]))
