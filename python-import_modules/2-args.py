@@ -6,6 +6,6 @@ if __name__ == "__main__":
     name = "argument"
     if len_list > 2:
         name += "s"
-    print("{} {}:".format(name, len_list - 1))
+    print("{} {}:".format(len_list - 1, name))
     for i in range(1, len_list):
         print("{}: {}".format(i, arg_list[i]))
