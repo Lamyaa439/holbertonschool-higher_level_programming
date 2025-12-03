@@ -3,8 +3,8 @@ def square_matrix_simple(matrix=[]):
     new_matrix = []
     square = 0
     for row in matrix:
+        new_row = []
         for coulm in row:
-            square = matrix[row][coulm]
-            square **= 2
-            new_matrix[row][matrix] += square
+            new_row.append(coulm**2)
+        new_matrix.append(new_row)
     return new_matrix
