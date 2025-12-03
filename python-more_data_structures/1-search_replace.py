@@ -12,4 +12,3 @@ replace: is the new element
         else:
             new_list.append(my_list[i])
     return new_list
-
