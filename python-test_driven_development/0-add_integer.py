@@ -3,6 +3,8 @@
 Module 0-add_integer
 Defines a function that adds integers.
 """
+
+
 def add_integer(a, b=98):
     """
     Returns the addition of a and b.
