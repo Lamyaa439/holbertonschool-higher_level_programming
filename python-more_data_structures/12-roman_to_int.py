@@ -2,6 +2,7 @@
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or roman_string is None:
         return 0
+
     roman_dict = {
         "I": 1,
         "V": 5,
@@ -11,8 +12,10 @@ def roman_to_int(roman_string):
         "D": 500,
         "M": 1000
     }
+
     result = 0
     length = len(roman_string)
+
     for i in range(length):
         # Get the value of the current character
         current_value = roman_dict.get(roman_string[i], 0)
@@ -29,4 +32,5 @@ def roman_to_int(roman_string):
         else:
             # Always add the last character
             result += current_value
+
     return result
