@@ -36,6 +36,12 @@ Div is not a number:
     ...
     TypeError: div must be a number
 
+Division by Infinity
+====================
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 Matrix Validation Errors
 ========================
 Matrix is not a list:
