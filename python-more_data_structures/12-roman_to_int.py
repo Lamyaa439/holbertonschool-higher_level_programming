@@ -17,20 +17,16 @@ def roman_to_int(roman_string):
     length = len(roman_string)
 
     for i in range(length):
-        # Get the value of the current character
         current_value = roman_dict.get(roman_string[i], 0)
-        
-        # Check if there is a next character
+
         if i < length - 1:
             next_value = roman_dict.get(roman_string[i + 1], 0)
-            
-            # Subtraction Rule (e.g., IV: 1 < 5)
+
             if current_value < next_value:
                 result -= current_value
             else:
                 result += current_value
         else:
-            # Always add the last character
             result += current_value
 
     return result
