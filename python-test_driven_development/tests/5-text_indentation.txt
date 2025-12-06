@@ -1,0 +1,87 @@
+=========================================
+Tests for text_indentation module
+=========================================
+
+The ``text_indentation`` module supplies one function, ``text_indentation(text)``.
+
+Import the function
+===================
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Standard Usage
+==============
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem.")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+    Non autem hoc:
+    <BLANKLINE>
+    igitur ne illud quidem.
+    <BLANKLINE>
+
+Spacing Handling
+================
+It should trim spaces at the beginning of lines (and the text itself):
+    >>> text_indentation("   Hello.   World")
+    Hello.
+    <BLANKLINE>
+    World
+
+It should handle delimiters with no spaces after them:
+    >>> text_indentation("Hello.World")
+    Hello.
+    <BLANKLINE>
+    World
+
+It should handle multiple delimiters in a row (skip spaces in between if any):
+    >>> text_indentation("Hello?   ...   World")
+    Hello?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    World
+
+Edge Cases
+==========
+Empty string:
+    >>> text_indentation("")
+
+String with only spaces:
+    >>> text_indentation("      ")
+
+Text without delimiters:
+    >>> text_indentation("Just a simple sentence")
+    Just a simple sentence
+
+Error Handling: Invalid Types
+=============================
+Integer:
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+List:
+    >>> text_indentation(["Hello"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    
+Float:
+    >>> text_indentation(12.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
