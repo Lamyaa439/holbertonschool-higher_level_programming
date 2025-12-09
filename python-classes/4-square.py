@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+"""
+0-square.py moduls to create a class
+"""
+
+
+class Square:
+    """
+    class Square that defines a square
+    """
+    def __init__(self, size=0):
+        """
+        init method
+        """
+        self.__size = size
+
+    def size(self, value):
+        """
+        method to setter
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
+    def size(self):
+        """
+        method to getter
+        """
+        return self.__size
+
+    def area(self):
+        """
+        method to returns the current square area
+        """
+        return self.__size ** 2
