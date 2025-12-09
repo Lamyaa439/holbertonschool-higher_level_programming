@@ -9,7 +9,7 @@ class Square:
     """
     Class Square that defines a square
     """
-    def __init__(self, size = 0, position = (0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new Square
 
