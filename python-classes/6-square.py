@@ -12,7 +12,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new Square
-
         Args:
             size (int): The size of the new square.
             position (tuple): The position of the new square.
