@@ -1,16 +1,21 @@
 #!/usr/bin/python3
 """
-0-square.py moduls to create a class
+Module 0-square
+Defines a class Square
 """
 
 
 class Square:
     """
-    class Square that defines a square
+    Class Square that defines a square
     """
     def __init__(self, size=0, position=(0, 0)):
         """
-        init method
+        Initializes a new Square
+
+        Args:
+            size (int): The size of the new square.
+            position (tuple): The position of the new square.
         """
         self.size = size
         self.position = position
@@ -18,14 +23,14 @@ class Square:
     @property
     def size(self):
         """
-        method to getter
+        Retrieves the size of the square
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        method to setter
+        Sets the size of the square
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -37,14 +42,14 @@ class Square:
     @property
     def position(self):
         """
-        method to to retrieve position
+        Retrieves the position of the square
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        method to to set position
+        Sets the position of the square
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -53,16 +58,15 @@ class Square:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-
     def area(self):
         """
-        method to returns the current square area
+        Returns the current square area
         """
         return self.__size ** 2
 
     def my_print(self):
         """
-        prints in stdout the square with the character #
+        Prints the square with the character # in stdout
         """
         if self.__size == 0:
             print()
