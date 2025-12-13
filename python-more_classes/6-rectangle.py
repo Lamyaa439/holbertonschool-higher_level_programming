@@ -97,5 +97,6 @@ class Rectangle:
         Print the message Bye rectangle... (... being 3 dots not ellipsis) when
         an instance of Rectangle is deleted
         """
+        Rectangle.number_of_instances -= 1
         del self
         print("Bye rectangle...")
