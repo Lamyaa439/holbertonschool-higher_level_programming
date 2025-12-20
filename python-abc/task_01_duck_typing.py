@@ -4,7 +4,7 @@ This module demonstrates Abstract Base Classes and Duck Typing in Python
 without using the math module.
 """
 from abc import ABC, abstractmethod
-
+from math import pi
 
 class Shape(ABC):
     """
@@ -29,15 +29,14 @@ class Circle(Shape):
 
     def __init__(self, radius):
         self.radius = radius
-        self.pi = 3.141592653589793
 
     def area(self):
         """Returns the area using A = pi * r^2"""
-        return self.pi * (self.radius ** 2)
+        return pi * (self.radius ** 2)
 
     def perimeter(self):
         """Returns the perimeter using P = 2 * pi * r"""
-        return 2 * self.pi * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
