@@ -64,5 +64,5 @@ def shape_info(shape):
     Args:
         shape: An object that is expected to have area() and perimeter() methods.
     """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
