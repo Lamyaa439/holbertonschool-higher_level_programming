@@ -28,7 +28,7 @@ class Circle(Shape):
     """
 
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Returns the area using A = pi * r^2"""
