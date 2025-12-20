@@ -10,6 +10,7 @@ class Shape(ABC):
     """
     This is a Shape class
     """
+
     @abstractmethod
     def area(self):
         """
@@ -29,6 +30,7 @@ class Circle(Shape):
     """
     This is a Circle class that inherits from Shape
     """
+
     def __init__(self, radius):
         """
         The constructor (__init__) should accept a radius.
@@ -52,6 +54,7 @@ class Rectangle(Shape):
     """
     This is a Rectangle class, also inheriting from Shape.
     """
+
     def __init__(self, width, height):
         """
         Instantiation with width and height
@@ -77,5 +80,6 @@ def shape_info(shape):
     a function named shape_info that takes a single argument.
     Print the area and perimeter of the shape passed to the function.
     """
+
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
