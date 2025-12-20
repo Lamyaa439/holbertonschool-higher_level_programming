@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-This module demonstrates Abstract Base Classes and Duck Typing in Python.
+This module demonstrates Abstract Base Classes and Duck Typing in Python
+without using the math module.
 """
 from abc import ABC, abstractmethod
-import math
 
 
 class Shape(ABC):
@@ -29,12 +29,15 @@ class Circle(Shape):
 
     def __init__(self, radius):
         self.radius = radius
+        self.pi = 3.141592653589793
 
     def area(self):
-        return math.pi * (self.radius ** 2)
+        """Returns the area using A = pi * r^2"""
+        return self.pi * (self.radius ** 2)
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        """Returns the perimeter using P = 2 * pi * r"""
+        return 2 * self.pi * self.radius
 
 
 class Rectangle(Shape):
@@ -47,9 +50,11 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
+        """Returns the area using A = w * h"""
         return self.width * self.height
 
     def perimeter(self):
+        """Returns the perimeter using P = 2 * (w + h)"""
         return 2 * (self.width + self.height)
 
 
