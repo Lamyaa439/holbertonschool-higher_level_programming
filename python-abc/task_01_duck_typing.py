@@ -1,85 +1,64 @@
 #!/usr/bin/env python3
 """
-This is model for Shapes, Interfaces, and Duck Typing
+This module demonstrates Abstract Base Classes and Duck Typing in Python.
 """
-import math
 from abc import ABC, abstractmethod
+import math
 
 
 class Shape(ABC):
     """
-    This is a Shape class
+    Abstract Base Class representing a geometric shape.
     """
 
     @abstractmethod
     def area(self):
-        """
-        to calclate area
-        """
+        """Calculates the area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """
-        to calclate perimeter
-        """
+        """Calculates the perimeter of the shape."""
         pass
 
 
 class Circle(Shape):
     """
-    This is a Circle class that inherits from Shape
+    Concrete class representing a Circle.
     """
 
     def __init__(self, radius):
-        """
-        The constructor (__init__) should accept a radius.
-        """
         self.radius = radius
 
     def area(self):
-        """
-        calclate the area of Circle
-        """
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        """
-        claclate perimeter for Circle
-        """
         return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
     """
-    This is a Rectangle class, also inheriting from Shape.
+    Concrete class representing a Rectangle.
     """
 
     def __init__(self, width, height):
-        """
-        Instantiation with width and height
-        """
         self.width = width
         self.height = height
 
     def area(self):
-        """
-        calclate the area of Rectangle
-        """
         return self.width * self.height
 
     def perimeter(self):
-        """
-        claclate perimeter for Rectangle
-        """
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
     """
-    a function named shape_info that takes a single argument.
-    Print the area and perimeter of the shape passed to the function.
+    Prints the area and perimeter of a shape using Duck Typing.
+    
+    Args:
+        shape: An object that is expected to have area() and perimeter() methods.
     """
-
-    print("Area: {}".format(shape.area()))
-    print("Perimeter: {}".format(shape.perimeter()))
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
