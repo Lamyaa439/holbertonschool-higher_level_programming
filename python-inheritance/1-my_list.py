@@ -10,6 +10,5 @@ class MyList(list):
         """
         prints the list, but sorted (ascending sort)
         """
-        sort_list =sorted(self)
+        sort_list = sorted(self)
         print(sort_list)
-
