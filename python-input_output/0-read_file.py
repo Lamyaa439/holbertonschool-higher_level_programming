@@ -6,7 +6,7 @@
 
 def read_file(filename=""):
     """
-    This function to read file 
+    This function to read file
     """
     with open(filename) as f:
         f_contents = f.read()
