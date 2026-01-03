@@ -23,9 +23,9 @@ def fetch_and_save_posts():
     data_toSave = []
     for post in posts:
         data_toSave.append({
-            "id": post("id"),
-            "title": post("title"),
-            "body": post("body")
+            "id": post["id"],
+            "title": post["title"],
+            "body": post["body"]
             })
 
     with open("posts.csv", mode='w', encoding='utf-8', newline='') as f:
