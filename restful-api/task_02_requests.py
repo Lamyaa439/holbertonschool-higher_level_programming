@@ -34,6 +34,3 @@ def fetch_and_save_posts():
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data_toSave)
-
-    else:
-        pass
