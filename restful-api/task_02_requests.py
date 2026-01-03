@@ -20,17 +20,16 @@ def fetch_and_save_posts():
     if r.status_code == 200:
         posts = r.json()
 
-    data_toSave = [
-            {
-            "id": post["id"],
-            "title": post["title"],
-            "body": post["body"]
-            }
-            for post in posts
+        data_toSave = [
+                {
+                    "id": post["id"],
+                    "title": post["title"],
+                    "body": post["body"]
+                }
+                for post in posts
             ]
-
-    with open("posts.csv", mode='w', encoding='utf-8', newline='') as f:
-        fieldnames = ['id', 'title', 'body']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(data_toSave)
+        with open("posts.csv", mode='w', encoding='utf-8', newline='') as f:
+            fieldnames = ['id', 'title', 'body']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data_toSave)
