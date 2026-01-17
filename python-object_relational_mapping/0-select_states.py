@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Lists all states from the database hbtn_0e_0_usa."""
-
 import sys
 import MySQLdb
 
@@ -27,6 +26,7 @@ def main():
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     main()
