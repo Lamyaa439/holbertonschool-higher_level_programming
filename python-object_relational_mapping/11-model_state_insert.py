@@ -23,9 +23,8 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Create new State object
     new_state = State(name="Louisiana")
-    
+
     # Add to session and commit to database
     session.add(new_state)
     session.commit()
