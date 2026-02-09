@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review - HBnB Evolution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="HBnB Evolution Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="login.html" class="login-button">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <h1>Add Your Review</h1>
+            <p style="margin-bottom: 20px; color: #666;">
+                Share your experience to help other travelers make informed decisions.
+            </p>
+
+            <form class="form" id="add-review-form">
+                <label for="place-name">Place:</label>
+                <input 
+                    type="text" 
+                    id="place-name" 
+                    name="place-name" 
+                    value="Cozy Apartment in Downtown"
+                    readonly
+                    style="background-color: #f8f9fa;"
+                >
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select your rating</option>
+                    <option value="5">★★★★★ 5 - Excellent</option>
+                    <option value="4">★★★★☆ 4 - Very Good</option>
+                    <option value="3">★★★☆☆ 3 - Good</option>
+                    <option value="2">★★☆☆☆ 2 - Fair</option>
+                    <option value="1">★☆☆☆☆ 1 - Poor</option>
+                </select>
+
+                <label for="comment">Your Review:</label>
+                <textarea 
+                    id="comment" 
+                    name="comment" 
+                    placeholder="Tell us about your experience at this place..."
+                    required
+                    minlength="10"
+                ></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HBnB Evolution. All rights reserved.</p>
+    </footer>
+</body>
+</html>
