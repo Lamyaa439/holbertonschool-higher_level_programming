@@ -30,5 +30,5 @@ if __name__ == "__main__":
     # display results
     for city, state in results:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
-    
+
     session.close()
